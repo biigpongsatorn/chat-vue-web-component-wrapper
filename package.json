@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run build",
-    "build": "rimraf dist && cross-env NODE_ENV=production rollup -c",
+    "build": "rm -rf ./dist && vue-cli-service build --target wc --name chat-vue-web-component-wrapper ./src/main.js",
     "dev": "rollup -c -w"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "url": "https://github.com/kartsims/vue-customelement-bundler.git"
   },
   "devDependencies": {
+    "@vue/cli-service": "^3.0.3",
     "cross-env": "^4.0.0",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
@@ -26,7 +27,6 @@
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-plugin-vue": "^2.3.1",
     "rollup-watch": "^3.2.2",
-    "vue": "^2.2.6",
-    "vue-custom-element": "^1.1.0"
+    "vue": "^2.2.6"
   }
 }

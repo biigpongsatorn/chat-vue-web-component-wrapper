@@ -1,9 +1,6 @@
 import Vue from 'vue'
+import wrap from '@vue/web-component-wrapper'
 
-// include vue-custom-element plugin to Vue
-import VueCustomElement from 'vue-custom-element'
-Vue.use(VueCustomElement)
+const Chat = wrap(Vue, () => import(`./components/Chat`))
 
-// import and register your component(s)
-import ChatVueCustomElement from './components/Chat.vue'
-Vue.customElement('chat-vue-custom-element', ChatVueCustomElement)
+window.customElements.define('chat-vue-web-component-wrapper', Chat)

@@ -1,4 +1,4 @@
-# Vue Custom Element Bundler
+# chat-vue-web-component-wrapper
 
 Example using Rollup to bundle one or many Vue.js components into a single .js file that **can be used in any HTML/JS application.**
 
