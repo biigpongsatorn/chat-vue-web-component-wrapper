@@ -29,16 +29,20 @@
 export default {
   name: 'Chat',
   props: {
-    thread: Object,
     name: String,
     prefix: String,
     id: Number,
-    msg: Array
   },
   data () {
     return {
       inputMessageBox: '',
-      messages: this.msg
+      thread: {
+        img: 'https://vignette.wikia.nocookie.net/line/images/b/b7/1511.png/revision/latest?cb=20150809133444'
+      },
+      messages: [
+        { sender: 'user', message: 'Hello :)' },
+        { sender: 'user', message: 'How are you ?' }
+      ]
     }
   },
   methods: {

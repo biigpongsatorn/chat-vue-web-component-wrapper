@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run build",
-    "build": "rm -rf ./dist && vue-cli-service build --target wc --name chat-vue-web-component-wrapper ./src/main.js",
+    "build": "rm -rf ./dist && vue-cli-service build --target wc --name chat-vue-web-component-wrapper ./src/Chat.vue",
     "dev": "rollup -c -w"
   },
   "author": "",
