@@ -12,8 +12,6 @@
     { sender: 'user', message: 'How are you ?' }
   ]
 
-  console.log(JSON.stringify(chat))
-
   // EVENT
   chat.addEventListener('sendMessage', (event) => {
     const payload = event.detail[0]
