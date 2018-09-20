@@ -1,0 +1,29 @@
+<html>
+  <body>
+
+    <chat-vue-custom-element></chat-vue-custom-element>
+
+    <script>
+      const chat = document.getElementsByTagName('chat-vue-custom-element')[0]
+      chat.name = 'Brown'
+      chat.id = 99271
+      chat.thread = { img: 'https://vignette.wikia.nocookie.net/line/images/b/b7/1511.png/revision/latest?cb=20150809133444' }
+      chat.msg = [
+        { sender: 'user', message: 'Hello :)' },
+        { sender: 'user', message: 'How are you ?' }
+      ]
+
+      console.log(JSON.stringify(chat))
+
+      // EVENT
+      chat.addEventListener('sendMessage', (event) => {
+        const payload = event.detail[0]
+        console.log('Sender = ', payload.sender)
+        console.log('Message = ', payload.message)
+      })
+    </script>
+
+    <script src="./my-vue-component.js"></script>
+
+  </body>
+</html>
