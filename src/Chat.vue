@@ -10,7 +10,7 @@
           <span>{{ m.message }}</span>
         </div>
         <div class="message-right" v-else>
-          <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple128/v4/86/70/a5/8670a5dc-5351-6c83-5145-f6fa2c11f6d4/source/512x512bb.jpg">
+          <img src="./assets/cony.jpg">
           <span>{{ m.message }}</span>
         </div>
       </div>
